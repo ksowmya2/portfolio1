@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mt protfolio</title>
+    <link rel="stylesheet" href="./Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Assets/css/aos.css">
+    <link rel="stylesheet" href="./Assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        card-custom .card-custom-img{
+    overflow: hidden;
+}
+.card-custom .card-custom-img img{
+    transition: all 0.60 ease;
+}
+.card-custom:hover .card-custom-img img{
+    transform: scale(1.1);
+}
+
+
+shadow-effect{
+transition: all 0.5s;
+border-width: 5px;
+}
+.shadow-effect:hover{
+    box-shadow: -6px 6px 0 0 #db7807;
+    color: #1587b8;
+    
+}
+.full-height{
+    min-height: 80vh;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255,255,0.1);    
+}
+.text-brand{
+    padding-top: 40px;  
+    padding-left: 70px;
+    display: flex;
+    gap: 5%;
+}
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+<!-- navbar -->
+<header class="header">
+    <a class="logo" href="#">KS<span>.</span></a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="index.html"   style="--i:1;" >Home</a>
+      <a href="education.html" style="--i:2;">About Me</a>
+      <a href="skill.html" style="--i:3;">Skills</a>
+      <a href="projects.html" class="active" style="--i:4;color: #0ef;">Projects</a>
+      <a href="contact.html"style="--i:5;">Contact</a>
+    </nav>
+    
+    <div class="resume-btn">
+      <button id="resume-toggle">Resume ▼</button> <!-- Dropdown toggle button -->
+      <div class="dropdown-menu" id="dropdown-menu">
+        <a href="images/KINTHALI SOWMYA -RESUME.pdf" target="_blank"><i class="fa-sharp fa-light fa-eye"></i>View</a>
+        <a href="images/KINTHALI SOWMYA -RESUME.pdf"  download target="_blank" class="download-btn" title="Download Resume"><i class="fa-solid fa-download"></i> Download</a>
+      </div>
+    </div>
+</header>
+<!-- projects -->
+  <div id="content-wrapper">
+    <section id="works" class="full-height1 px-lg-5">
+        <div class="container">
+            <div class="row pb-4" data-aos="fade-up">
+                <div class="col-lg-8">
+                    <h1 class="head">Projects</h1>
+                    <h4 class="text-brand">Desinging Works</h4>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card-custom rounded-4 bg-base shadow-effect">
+                        <div class="card-custom-image rounded-4">
+                            <img class="rounded-4" src="./Assets/images/des-work1.png" alt="work1" style="width: 98%;height:120%; margin-top:1%;margin-left:1%" >
+                        </div>
+                        <div class="card-custom-content p-4">
+                            <h4 class="text-brand mb-2"> Small Web Page</h4>
+                            <p class="mb-4">"Design this webpage using HTML and CSS. Add various images and apply different styles to enhance the webpage’s appearance."</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card-custom rounded-4 bg-base shadow-effect">
+                        <div class="card-custom-image rounded-4">
+                            <img class="rounded-4" src="./Assets/images/des-work2.png" alt="work1" style="width: 98%;height:120%; margin-top:1%;margin-left:1%" >
+                        </div>
+                        <div class="card-custom-content p-4">
+                            <h4 class="text-brand mb-2"> Small Web Page</h4>
+                            <p class="mb-4">"Design this webpage using HTML and CSS. Add various images and apply different styles to enhance the webpage’s appearance."</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card-custom rounded-4 bg-base shadow-effect">
+                        <div class="card-custom-image rounded-4">
+                            <img class="rounded-4" src="./Assets/images/des-work1.png" alt="work1" style="width: 98%;height:120%; margin-top:1%;margin-left:1%" >
+                        </div>
+                        <div class="card-custom-content p-4">
+                            <h4 class="text-brand mb-2"> Small Web Page</h4>
+                            <p class="mb-4">"Design this webpage using HTML and CSS. Add various images and apply different styles to enhance the webpage’s appearance."</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+</div>
+<script src="./Assets/javascript/bootstrap.bundle.min.js"></script>
+<script src="./Assets/javascript/aos.js"></script>
+<script src="./Assets/javascript/main.js"></script>
+</body>
+</html>

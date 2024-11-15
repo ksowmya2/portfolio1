@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global styles */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1f242d;
+            color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .skills {
+            text-align: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .skills h2 {
+            font-size: 4.5rem;
+            color: #0ef;
+            margin-bottom: 1rem;
+            animation: fadeInDown 0.8s ease-in-out;
+        }
+
+        .skill-section {
+            background-color: #323946;
+            padding: 1.5rem;
+            border-radius: 10px;
+            width: 900px;
+            height: 400px;
+            margin: 2rem auto; /* Center skill-section horizontally */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            text-align: center; /* Center align content inside */
+        }
+
+        .skill-section h3 {
+            margin-top: 4rem;
+            font-size: 1.8rem;
+            color: rgb(255, 255, 255);
+            margin-bottom: 3rem;
+        }
+
+        .skills-container {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .skill-card {
+            width: 120px;
+            text-align: center;
+            color: #f5f5f5;
+            padding: 10px;
+            background-color: #2b2f38;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            animation: fadeInUp 1s ease;
+        }
+
+        .skill-card:hover {
+            transform: scale(1.05);
+            background-color: #3a3f4c;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: #3a3f4c;
+            border-radius: 50%;
+        }
+
+        .percentage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0ef;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 50%;
+        }
+
+        .image-container:hover .percentage {
+            opacity: 1;
+        }
+
+        .skill-card span {
+            display: block;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 5px;
+            background-color: #2b2f38;
+            border-radius: 5px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills h2 {
+                font-size: 2.5rem;
+            }
+
+            .skill-section {
+                padding: 1rem;
+                width: 100%;
+            }
+
+            .skill-card {
+                width: 100px;
+            }
+
+            .skills-container {
+                flex-direction: column;
+            }
+        }
+
+        /* Responsive Design */
+@media (max-width: 480px) {
+    .skills h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .skill-section {
+        padding: 1rem;
+        width: 100%;
+        margin: 1rem 0; 
+    }
+
+    .skills-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .skill-card {
+        width: 80px;
+        padding: 5px;
+        margin: 0.5rem;
+        text-align: center;
+    }
+
+    .image-container {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+    }
+
+    .skill-card span {
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+    }
+}
+
+ /* @media (max-width: 480px) and (min-width: 361px) {
+    .skills h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .skill-section h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .skill-section {
+        padding: 1rem;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .skills-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+} */
+
+/* Further adjustments for screens 360px and below */
+@media (max-width: 360px) {
+    .skills h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .skill-section h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .skill-section {
+        padding: 1rem;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .skills-container {
+        flex-direction: row;
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 80px;
+        padding: 5px;
+    }
+
+    .image-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    .percentage {
+        font-size: 0.9rem;
+    }
+
+    .skill-card span {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .skills h2 {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .skill-section h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .skill-section {
+        padding: 0.8rem;
+        width: 100%;
+    }
+
+    .skills-container {
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .skill-card {
+        width: 60px;
+        padding: 4px;
+        margin: 0.4rem;
+    }
+
+    .image-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    .percentage {
+        font-size: 0.9rem;
+    }
+
+    .skill-card span {
+        font-size: 0.75rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <a class="logo" href="#">KS<span>.</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+          <a href="index.html"   style="--i:1;" >Home</a>
+          <a href="education.html" style="--i:2;">About Me</a>
+          <a href="skill.html" class="active" style="--i:3;color: #0ef;">Skills</a>
+          <a href="projects.html" style="--i:4;">Projects</a>
+          <a href="contact.html"style="--i:5;">Contact</a>
+        </nav>
+        
+        <div class="resume-btn">
+          <button id="resume-toggle">Resume ▼</button> <!-- Dropdown toggle button -->
+          <div class="dropdown-menu" id="dropdown-menu">
+            <a href="images/KINTHALI SOWMYA -RESUME.pdf" target="_blank">View</a>
+            <a href="images/KINTHALI SOWMYA -RESUME.pdf"  download target="_blank" class="download-btn" title="Download Resume"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </div>
+    </header>
+
+    <!-- skills -->
+    <section class="skills">
+        <h2>Skills</h2>
+        
+        <!-- Programming Skills Section -->
+        <div class="skill-section">
+            <h3>Programming Skills</h3>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="image-container">
+                        <img src="images/java4-removebg-preview.png" alt="Java" />
+                        <div class="percentage">85%</div>
+                    </div>
+                    <span>Java</span>
+                </div>
+                <div class="skill-card">
+                    <div class="image-container">
+                        <img src="images/py1-removebg-preview (1).png" alt="Python" />
+                        <div class="percentage">90%</div>
+                    </div>
+                    <span>Python</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Developing Skills Section -->
+        <div class="skill-section">
+            <h3>Developing Skills</h3>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="image-container">
+                        <img src="images/html5_16183594-removebg-preview.png" alt="HTML" />
+                        <div class="percentage">95%</div>
+                    </div>
+                    <span>HTML</span>
+                </div>
+                <div class="skill-card">
+                    <div class="image-container">
+                        <img src="images/css_888847.png" alt="CSS"/>
+                        <div class="percentage">90%</div>
+                    </div>
+                    <span>CSS</span>
+                </div>
+                <div class="skill-card">
+                    <div class="image-container">
+                        <img src="images/boot-removebg-preview.png" alt="Bootstrap" />
+                        <div class="percentage">85%</div>
+                    </div>
+                    <span>Bootstrap</span>
+                </div>
+                <div class="skill-card">
+                    <div class="image-container">
+                        <img src="images/js-removebg-preview.png" alt="JavaScript" />
+                        <div class="percentage">80%</div>
+                    </div>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-card">
+                    <div class="image-container">
+                        <img src="images/rjs-removebg-preview.png" alt="ReactJS" />
+                        <div class="percentage">75%</div>
+                    </div>
+                    <span>ReactJS</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Designing Skills Section -->
+        <div class="skill-section">
+            <h3>Designing Skills</h3>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="image-container">
+                        <img src="images/fig7-removebg-preview.png" alt="Figma"/>
+                        <div class="percentage">85%</div>
+                    </div>
+                    <span>Figma</span>
+                </div>
+                <div class="skill-card">
+                    <div class="image-container">
+                        <img src="images/illustrator_5968472.png" alt="Adobe Illustrator" />
+                        <div class="percentage">80%</div>
+                    </div>
+                    <span>Adobe Illustrator</span>
+                </div>
+                <div class="skill-card">
+                    <div class="image-container">
+                        <img src="images/photoshop_5968520.png" alt="Photoshop" />
+                        <div class="percentage">75%</div>
+                    </div>
+                    <span>Photoshop</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
